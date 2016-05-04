@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TheaterListActivity">
+
+    <TextView
+        android:id="@+id/theater_name"
+        android:text="金逸珠江国际影城（大学城店）"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#4D4D4D"
+        android:textSize="14dp"
+        android:layout_below="@+id/title"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="7dp"/>
+    <TextView
+        android:id="@+id/theater_address"
+        android:text="广州大学城GoGo新天地二期二楼"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#4D4D4D"
+        android:textSize="12dp"
+        android:layout_below="@+id/theater_name"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="7dp"/>
+    <TextView
+        android:id="@+id/theater_lowest_price"
+        android:text="¥28起"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#EE7600"
+        android:textSize="14dp"
+        android:layout_below="@+id/theater_address"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="7dp"/>
+
+    <TextView
+        android:id="@+id/theater_score"
+        android:text="8.0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#EE7600"
+        android:textSize="16dp"
+        android:textStyle="italic"
+        android:layout_alignTop="@+id/theater_name"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="14dp"
+        android:layout_marginEnd="14dp" />
+
+    <TextView
+        android:id="@+id/theater_distance"
+        android:text="170m"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#4D4D4D"
+        android:textSize="12dp"
+        android:layout_alignBottom="@+id/theater_lowest_price"
+        android:layout_alignRight="@+id/theater_score"
+        android:layout_alignEnd="@+id/theater_score" />
+</RelativeLayout>
