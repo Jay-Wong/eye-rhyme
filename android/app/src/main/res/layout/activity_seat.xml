@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.SeatActivity">
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/seat_page_title"
+        android:background="#1E90FF"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+        <ImageButton
+            android:id="@+id/back_to_movie"
+            android:layout_width="40dp"
+            android:layout_height="28dp"
+            android:scaleType="fitXY"
+            android:background="@mipmap/left"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp" />
+        <TextView
+            android:text="影院名称"
+            android:id="@+id/theater_name_seat_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:textSize="22dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+    <TextView
+        android:text="睡了我上铺的兄弟"
+        android:id="@+id/movie_name_in_seat_page"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:layout_below="@+id/seat_page_title"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp" />
+    <TextView
+        android:text="04月23日 周六 20:15"
+        android:id="@+id/movie_time_in_seat_page"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/movie_name_in_seat_page"
+        android:layout_alignLeft="@+id/movie_name_in_seat_page"
+        android:layout_alignStart="@+id/movie_name_in_seat_page" />
+    <TextView
+        android:text="普通话 2D 95分钟 售价39元"
+        android:id="@+id/movie_profile_in_seat_page"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/movie_time_in_seat_page"
+        android:layout_alignLeft="@+id/movie_time_in_seat_page"
+        android:layout_alignStart="@+id/movie_time_in_seat_page" />
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/seats"
+        android:background="#DDDDDD"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/movie_profile_in_seat_page"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <TextView
+            android:text="荧幕"
+            android:id="@+id/movie_hall_in_seat_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14dp"
+            android:layout_marginTop="5dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+        <GridLayout
+            android:id="@+id/grid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:rowCount="8"
+            android:columnCount="8"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/movie_hall_in_seat_page"
+            android:layout_centerHorizontal="true" >
+            <Button android:layout_width="24dp" android:layout_height="24dp" android:id="@+id/seat1"
+                android:background="#FFFFFF" android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" android:layout_marginTop="5dp"/>
+
+            <Button android:layout_width="24dp" android:layout_height="24dp" android:id="@+id/seat2"
+                android:background="#FFFFFF" android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" android:layout_marginTop="5dp"/>
+
+            <Button android:layout_width="24dp" android:layout_height="24dp" android:id="@+id/seat3"
+                android:background="#FFFFFF" android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" android:layout_marginTop="5dp"/>
+
+            <Button android:layout_width="24dp" android:layout_height="24dp" android:id="@+id/seat4"
+                android:background="#FFFFFF" android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" android:layout_marginTop="5dp"/>
+
+            <Button android:layout_width="24dp" android:layout_height="24dp" android:id="@+id/seat5"
+                android:background="#FFFFFF" android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" android:layout_marginTop="5dp"/>
+
+            <Button android:layout_width="24dp" android:layout_height="24dp" android:id="@+id/seat6"
+                android:background="#FFFFFF" android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" android:layout_marginTop="5dp"/>
+
+            <Button android:layout_width="24dp" android:layout_height="24dp" android:id="@+id/seat7"
+                android:background="#FFFFFF" android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" android:layout_marginTop="5dp"/>
+
+            <Button android:layout_width="24dp" android:layout_height="24dp" android:id="@+id/seat8"
+                android:background="#FFFFFF" android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" android:layout_marginTop="5dp"/>
+
+            <Button android:layout_width="24dp" android:layout_height="24dp" android:id="@+id/seat9"
+                android:background="#FFFFFF" android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" android:layout_marginTop="5dp"/>
+
+            <Button android:layout_width="24dp" android:layout_height="24dp" android:id="@+id/seat10"
+                android:background="#FFFFFF" android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" android:layout_marginTop="5dp"/>
+
+            <Button android:layout_width="24dp" android:layout_height="24dp" android:id="@+id/seat11"
+                android:background="#FFFFFF" android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" android:layout_marginTop="5dp"/>
+
+            <Button android:layout_width="24dp" android:layout_height="24dp" android:id="@+id/seat12"
+                android:background="#FFFFFF" android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" android:layout_marginTop="5dp"/>
+
+            <Button android:layout_width="24dp" android:layout_height="24dp" android:id="@+id/seat13"
+                android:background="#FFFFFF" android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" android:layout_marginTop="5dp"/>
+
+            <Button android:layout_width="24dp" android:layout_height="24dp" android:id="@+id/seat14"
+                android:background="#FFFFFF" android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" android:layout_marginTop="5dp"/>
+
+            <Button android:layout_width="24dp" android:layout_height="24dp" android:id="@+id/seat15"
+                android:background="#FFFFFF" android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" android:layout_marginTop="5dp"/>
+
+            <Button android:layout_width="24dp" android:layout_height="24dp" android:id="@+id/seat16"
+                android:background="#FFFFFF" android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" android:layout_marginTop="5dp"/>
+
+            <Button android:layout_width="24dp" android:layout_height="24dp" android:id="@+id/seat17"
+                android:background="#FFFFFF" android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" android:layout_marginTop="5dp"/>
+
+            <Button android:layout_width="24dp" android:layout_height="24dp" android:id="@+id/seat18"
+                android:background="#FFFFFF" android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" android:layout_marginTop="5dp"/>
+
+            <Button android:layout_width="24dp" android:layout_height="24dp" android:id="@+id/seat19"
+                android:background="#FFFFFF" android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" android:layout_marginTop="5dp"/>
+
+            <Button android:layout_width="24dp" android:layout_height="24dp" android:id="@+id/seat20"
+                android:background="#FFFFFF" android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" android:layout_marginTop="5dp"/>
+
+            <Button android:layout_width="24dp" android:layout_height="24dp" android:id="@+id/seat21"
+                android:background="#FFFFFF" android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" android:layout_marginTop="5dp"/>
+
+            <Button android:layout_width="24dp" android:layout_height="24dp" android:id="@+id/seat22"
+                android:background="#FFFFFF" android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" android:layout_marginTop="5dp"/>
+
+            <Button android:layout_width="24dp" android:layout_height="24dp" android:id="@+id/seat23"
+                android:background="#FFFFFF" android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" android:layout_marginTop="5dp"/>
+
+            <Button android:layout_width="24dp" android:layout_height="24dp" android:id="@+id/seat24"
+                android:background="#FFFFFF" android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" android:layout_marginTop="5dp"/>
+
+            <Button android:layout_width="24dp" android:layout_height="24dp" android:id="@+id/seat25"
+                android:background="#FFFFFF" android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" android:layout_marginTop="5dp"/>
+
+            <Button android:layout_width="24dp" android:layout_height="24dp" android:id="@+id/seat26"
+                android:background="#FFFFFF" android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" android:layout_marginTop="5dp"/>
+
+            <Button android:layout_width="24dp" android:layout_height="24dp" android:id="@+id/seat27"
+                android:background="#FFFFFF" android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" android:layout_marginTop="5dp"/>
+
+            <Button android:layout_width="24dp" android:layout_height="24dp" android:id="@+id/seat28"
+                android:background="#FFFFFF" android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" android:layout_marginTop="5dp"/>
+
+            <Button android:layout_width="24dp" android:layout_height="24dp" android:id="@+id/seat29"
+                android:background="#FFFFFF" android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" android:layout_marginTop="5dp"/>
+
+            <Button android:layout_width="24dp" android:layout_height="24dp" android:id="@+id/seat30"
+                android:background="#FFFFFF" android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" android:layout_marginTop="5dp"/>
+
+            <Button android:layout_width="24dp" android:layout_height="24dp" android:id="@+id/seat31"
+                android:background="#FFFFFF" android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" android:layout_marginTop="5dp"/>
+
+            <Button android:layout_width="24dp" android:layout_height="24dp" android:id="@+id/seat32"
+                android:background="#FFFFFF" android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" android:layout_marginTop="5dp"/>
+
+            <Button android:layout_width="24dp" android:layout_height="24dp" android:id="@+id/seat33"
+                android:background="#FFFFFF" android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" android:layout_marginTop="5dp"/>
+
+            <Button android:layout_width="24dp" android:layout_height="24dp" android:id="@+id/seat34"
+                android:background="#FFFFFF" android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" android:layout_marginTop="5dp"/>
+
+            <Button android:layout_width="24dp" android:layout_height="24dp" android:id="@+id/seat35"
+                android:background="#FFFFFF" android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" android:layout_marginTop="5dp"/>
+
+            <Button android:layout_width="24dp" android:layout_height="24dp" android:id="@+id/seat36"
+                android:background="#FFFFFF" android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" android:layout_marginTop="5dp"/>
+
+            <Button android:layout_width="24dp" android:layout_height="24dp" android:id="@+id/seat37"
+                android:background="#FFFFFF" android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" android:layout_marginTop="5dp"/>
+
+            <Button android:layout_width="24dp" android:layout_height="24dp" android:id="@+id/seat38"
+                android:background="#FFFFFF" android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" android:layout_marginTop="5dp"/>
+
+            <Button android:layout_width="24dp" android:layout_height="24dp" android:id="@+id/seat39"
+                android:background="#FFFFFF" android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" android:layout_marginTop="5dp"/>
+
+            <Button android:layout_width="24dp" android:layout_height="24dp" android:id="@+id/seat40"
+                android:background="#FFFFFF" android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" android:layout_marginTop="5dp"/>
+
+            <Button android:layout_width="24dp" android:layout_height="24dp" android:id="@+id/seat41"
+                android:background="#FFFFFF" android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" android:layout_marginTop="5dp"/>
+
+            <Button android:layout_width="24dp" android:layout_height="24dp" android:id="@+id/seat42"
+                android:background="#FFFFFF" android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" android:layout_marginTop="5dp"/>
+
+            <Button android:layout_width="24dp" android:layout_height="24dp" android:id="@+id/seat43"
+                android:background="#FFFFFF" android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" android:layout_marginTop="5dp"/>
+
+            <Button android:layout_width="24dp" android:layout_height="24dp" android:id="@+id/seat44"
+                android:background="#FFFFFF" android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" android:layout_marginTop="5dp"/>
+
+            <Button android:layout_width="24dp" android:layout_height="24dp" android:id="@+id/seat45"
+                android:background="#FFFFFF" android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" android:layout_marginTop="5dp"/>
+
+            <Button android:layout_width="24dp" android:layout_height="24dp" android:id="@+id/seat46"
+                android:background="#FFFFFF" android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" android:layout_marginTop="5dp"/>
+
+            <Button android:layout_width="24dp" android:layout_height="24dp" android:id="@+id/seat47"
+                android:background="#FFFFFF" android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" android:layout_marginTop="5dp"/>
+
+            <Button android:layout_width="24dp" android:layout_height="24dp" android:id="@+id/seat48"
+                android:background="#FFFFFF" android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" android:layout_marginTop="5dp"/>
+
+            <Button android:layout_width="24dp" android:layout_height="24dp" android:id="@+id/seat49"
+                android:background="#FFFFFF" android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" android:layout_marginTop="5dp"/>
+
+            <Button android:layout_width="24dp" android:layout_height="24dp" android:id="@+id/seat50"
+                android:background="#FFFFFF" android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" android:layout_marginTop="5dp"/>
+
+            <Button android:layout_width="24dp" android:layout_height="24dp" android:id="@+id/seat51"
+                android:background="#FFFFFF" android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" android:layout_marginTop="5dp"/>
+
+            <Button android:layout_width="24dp" android:layout_height="24dp" android:id="@+id/seat52"
+                android:background="#FFFFFF" android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" android:layout_marginTop="5dp"/>
+
+            <Button android:layout_width="24dp" android:layout_height="24dp" android:id="@+id/seat53"
+                android:background="#FFFFFF" android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" android:layout_marginTop="5dp"/>
+
+            <Button android:layout_width="24dp" android:layout_height="24dp" android:id="@+id/seat54"
+                android:background="#FFFFFF" android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" android:layout_marginTop="5dp"/>
+
+            <Button android:layout_width="24dp" android:layout_height="24dp" android:id="@+id/seat55"
+                android:background="#FFFFFF" android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" android:layout_marginTop="5dp"/>
+
+            <Button android:layout_width="24dp" android:layout_height="24dp" android:id="@+id/seat56"
+                android:background="#FFFFFF" android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" android:layout_marginTop="5dp"/>
+
+            <Button android:layout_width="24dp" android:layout_height="24dp" android:id="@+id/seat57"
+                android:background="#FFFFFF" android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" android:layout_marginTop="5dp"/>
+
+            <Button android:layout_width="24dp" android:layout_height="24dp" android:id="@+id/seat58"
+                android:background="#FFFFFF" android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" android:layout_marginTop="5dp"/>
+
+            <Button android:layout_width="24dp" android:layout_height="24dp" android:id="@+id/seat59"
+                android:background="#FFFFFF" android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" android:layout_marginTop="5dp"/>
+
+            <Button android:layout_width="24dp" android:layout_height="24dp" android:id="@+id/seat60"
+                android:background="#FFFFFF" android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" android:layout_marginTop="5dp"/>
+
+            <Button android:layout_width="24dp" android:layout_height="24dp" android:id="@+id/seat61"
+                android:background="#FFFFFF" android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" android:layout_marginTop="5dp"/>
+
+            <Button android:layout_width="24dp" android:layout_height="24dp" android:id="@+id/seat62"
+                android:background="#FFFFFF" android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" android:layout_marginTop="5dp"/>
+
+            <Button android:layout_width="24dp" android:layout_height="24dp" android:id="@+id/seat63"
+                android:background="#FFFFFF" android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" android:layout_marginTop="5dp"/>
+
+            <Button android:layout_width="24dp" android:layout_height="24dp" android:id="@+id/seat64"
+                android:background="#FFFFFF" android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" android:layout_marginTop="5dp"/>
+
+        </GridLayout>
+
+        <RelativeLayout android:layout_below="@+id/grid"
+            android:layout_width="match_parent" android:layout_height="wrap_content">
+            <Button android:layout_width="24dp" android:layout_height="24dp" android:id="@+id/description1"
+                android:background="#FFFFFF" android:layout_marginLeft="75dp"
+                android:layout_marginStart="75dp" android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true" android:layout_alignParentStart="true" />
+            <Button android:layout_width="24dp" android:layout_height="24dp"
+                android:id="@+id/description2"
+                android:background="#1E90FF" android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true" />
+            <Button android:layout_width="24dp" android:layout_height="24dp"
+                android:id="@+id/description3" android:background="#708090"
+                android:layout_centerVertical="true" android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/textView2" android:layout_toEndOf="@+id/textView2"
+                android:layout_marginLeft="28dp" android:layout_marginBottom="20dp"
+                android:layout_marginStart="28dp" />
+            <TextView
+                android:text="可选" android:textSize="14dp"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_centerVertical="true" android:layout_toRightOf="@+id/description1"
+                android:layout_toEndOf="@+id/description1" android:id="@+id/textView3" />
+            <TextView
+                android:text="已选" android:id="@+id/textView2"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:textSize="14dp" android:layout_centerVertical="true"
+                android:layout_alignParentTop="true" android:layout_toRightOf="@+id/description2"
+                android:layout_toEndOf="@+id/description2" />
+            <TextView
+                android:text="已售" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:textSize="14dp"
+                android:layout_centerVertical="true" android:id="@+id/textView"
+                android:layout_alignTop="@+id/textView2"
+                android:layout_toRightOf="@+id/description3"
+                android:layout_toEndOf="@+id/description3" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:background="#708090" android:text="确定  ¥0" android:textColor="#FFFFFF"
+        android:layout_below="@+id/seats" android:layout_marginTop="20dp"
+        android:paddingLeft="20dp" android:paddingRight="20dp"
+        android:layout_centerHorizontal="true" android:id="@+id/submit_seat"/>
+
+</RelativeLayout>

@@ -1,72 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TheaterListActivity" >
+    android:orientation="vertical"
+    tools:context=".activity.TheaterListActivity" >
 
-    <RelativeLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/title"
-        android:background="#1E90FF"
+    <include layout="@layout/toolbar_support"/>
+    <cn.bingoogolapple.refreshlayout.BGARefreshLayout
+        android:id="@+id/refreshlayout"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true">
-        <ImageButton
-            android:id="@+id/back_to_main"
-            android:layout_width="36dp"
-            android:layout_height="28dp"
-            android:scaleType="fitXY"
-            android:background="@mipmap/left"
-            android:layout_centerVertical="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginLeft="27dp"
-            android:layout_marginStart="27dp" />
-        <TextView
-            android:text="影院列表"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="#FFFFFF"
-            android:textSize="22dp"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true" />
-    </RelativeLayout>
-
-    <TextView
-        android:id="@+id/tips_text"
-        android:text="所有影院"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="#4D4D4D"
-        android:textSize="14dp"
-        android:layout_below="@+id/title"
-        android:layout_marginLeft="7dp"
-        android:layout_marginTop="7dp"
-        android:layout_marginBottom="7dp" />
-
-    <LinearLayout
-        android:id="@+id/line"
-        android:layout_below="@+id/tips_text"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical" >
-        <View
+        android:layout_height="match_parent">
+        <ListView
+            android:id="@+id/listview"
             android:layout_width="match_parent"
-            android:layout_height="1px"
-            android:background="@android:color/darker_gray"
-            android:layout_marginBottom="1.0px"/>
-    </LinearLayout>
+            android:layout_height="0dp"
+            android:layout_weight="1">
 
-    <ListView
-        android:id="@+id/theater_list"
-        android:layout_below="@+id/line"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
-    </ListView>
+        </ListView>
+    </cn.bingoogolapple.refreshlayout.BGARefreshLayout>
 
-</RelativeLayout>
+</LinearLayout>

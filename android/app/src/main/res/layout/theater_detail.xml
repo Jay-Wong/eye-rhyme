@@ -1,230 +1,443 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="fill_parent"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="#F0F0F0">
-    <RelativeLayout
-        android:id="@+id/theater_poster"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:background="@mipmap/theater_img">
-        <ImageButton
-            android:id="@+id/back_to_theater_list"
-            android:layout_width="40dp"
-            android:layout_height="28dp"
-            android:scaleType="fitXY"
-            android:background="@mipmap/left"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginLeft="27dp"
-            android:layout_marginStart="27dp"
-            android:layout_marginTop="27dp" />
+    android:scrollbars="none">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#F0F0F0">
+        <RelativeLayout
+            android:id="@+id/theater_poster"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@mipmap/theater_img">
+            <ImageButton
+                android:id="@+id/back_to_theater_list"
+                android:layout_width="40dp"
+                android:layout_height="28dp"
+                android:scaleType="fitXY"
+                android:background="@mipmap/left"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="27dp" />
 
-        <ImageView
-            android:id="@+id/like_this_theater"
-            android:layout_width="36dp"
-            android:layout_height="36dp"
-            android:scaleType="fitXY"
-            android:background="@mipmap/not_like"
-            android:layout_marginRight="27dp"
-            android:layout_marginEnd="27dp"
-            android:layout_alignTop="@+id/back_to_theater_list"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true" />
+
+
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:background="#90000000"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true">
+                <TextView
+                    android:text="影院"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16dp"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginTop="9dp"
+                    android:id="@+id/theater_name_in_detail_page" />
+                <ImageView
+                    android:id="@+id/star_1"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:scaleType="fitXY"
+                    android:background="@mipmap/unstar"
+                    android:layout_marginTop="7dp"
+                    android:layout_below="@+id/theater_name_in_detail_page"
+                    android:layout_alignLeft="@+id/theater_name_in_detail_page"
+                    android:layout_alignStart="@+id/theater_name_in_detail_page" />
+                <ImageView
+                    android:id="@+id/star_2"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:scaleType="fitXY"
+                    android:background="@mipmap/unstar"
+                    android:layout_alignTop="@+id/star_1"
+                    android:layout_toRightOf="@+id/star_1"
+                    android:layout_toEndOf="@+id/star_1" />
+                <ImageView
+                    android:id="@+id/star_3"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:scaleType="fitXY"
+                    android:background="@mipmap/unstar"
+                    android:layout_alignTop="@+id/star_2"
+                    android:layout_toRightOf="@+id/star_2"
+                    android:layout_toEndOf="@+id/star_2" />
+                <ImageView
+                    android:id="@+id/star_4"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:scaleType="fitXY"
+                    android:background="@mipmap/unstar"
+                    android:layout_alignTop="@+id/star_3"
+                    android:layout_toRightOf="@+id/star_3"
+                    android:layout_toEndOf="@+id/star_3" />
+                <ImageView
+                    android:id="@+id/star_5"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:scaleType="fitXY"
+                    android:background="@mipmap/unstar"
+                    android:layout_alignTop="@+id/star_4"
+                    android:layout_toRightOf="@+id/star_4"
+                    android:layout_toEndOf="@+id/star_4" />
+
+                <TextView
+                    android:id="@+id/theater_score_in_detail_page"
+                    android:text="10.0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#EE7600"
+                    android:textSize="20dp"
+                    android:textStyle="italic"
+                    android:layout_marginLeft="10dp"
+                    android:layout_alignBottom="@+id/star_5"
+                    android:layout_toRightOf="@+id/star_5"
+                    android:layout_toEndOf="@+id/star_5" />
+                <TextView
+                    android:id="@+id/assess_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16dp"
+                    android:text="44人评价"
+                    android:layout_alignBottom="@+id/theater_score_in_detail_page"
+                    android:layout_toRightOf="@+id/theater_score_in_detail_page"
+                    android:layout_toEndOf="@+id/theater_score_in_detail_page"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp" />
+            </RelativeLayout>
+        </RelativeLayout>
 
         <RelativeLayout
             xmlns:android="http://schemas.android.com/apk/res/android"
-            android:background="#90000000"
+            android:id="@+id/address_in_detail_page"
+            android:background="@drawable/button_selector"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="50dp"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"
             android:layout_alignParentBottom="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true">
-            <TextView
-                android:text="影院"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="#FFFFFF"
-                android:textSize="16dp"
+
+            <ImageView
+                android:id="@+id/loc_icon_in_detail_page"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:scaleType="fitXY"
+                android:background="@mipmap/location_icon"
                 android:layout_marginLeft="7dp"
-                android:layout_marginTop="9dp"
-                android:id="@+id/theater_name_in_detail_page" />
-            <ImageView
-                android:id="@+id/star_1"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:scaleType="fitXY"
-                android:background="@mipmap/unstar"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:text="位置"
+                android:id="@+id/theater_address_in_detail_page"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#666666"
+                android:textSize="14dp"
                 android:layout_marginTop="7dp"
-                android:layout_below="@+id/theater_name_in_detail_page"
-                android:layout_alignLeft="@+id/theater_name_in_detail_page"
-                android:layout_alignStart="@+id/theater_name_in_detail_page" />
-            <ImageView
-                android:id="@+id/star_2"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:scaleType="fitXY"
-                android:background="@mipmap/unstar"
-                android:layout_alignTop="@+id/star_1"
-                android:layout_toRightOf="@+id/star_1"
-                android:layout_toEndOf="@+id/star_1" />
-            <ImageView
-                android:id="@+id/star_3"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:scaleType="fitXY"
-                android:background="@mipmap/unstar"
-                android:layout_alignTop="@+id/star_2"
-                android:layout_toRightOf="@+id/star_2"
-                android:layout_toEndOf="@+id/star_2" />
-            <ImageView
-                android:id="@+id/star_4"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:scaleType="fitXY"
-                android:background="@mipmap/unstar"
-                android:layout_alignTop="@+id/star_3"
-                android:layout_toRightOf="@+id/star_3"
-                android:layout_toEndOf="@+id/star_3" />
-            <ImageView
-                android:id="@+id/star_5"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:scaleType="fitXY"
-                android:background="@mipmap/unstar"
-                android:layout_alignTop="@+id/star_4"
-                android:layout_toRightOf="@+id/star_4"
-                android:layout_toEndOf="@+id/star_4" />
+                android:layout_marginLeft="7dp"
+                android:layout_toRightOf="@+id/loc_icon_in_detail_page"
+                android:layout_toEndOf="@+id/loc_icon_in_detail_page" />
 
-            <TextView
-                android:id="@+id/theater_score_in_detail_page"
-                android:text="10.0"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="#EE7600"
-                android:textSize="20dp"
-                android:textStyle="italic"
-                android:layout_marginLeft="10dp"
-                android:layout_alignBottom="@+id/star_5"
-                android:layout_toRightOf="@+id/star_5"
-                android:layout_toEndOf="@+id/star_5" />
-            <TextView
-                android:id="@+id/assess_number"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="#FFFFFF"
-                android:textSize="16dp"
-                android:layout_alignBottom="@+id/theater_score_in_detail_page"
-                android:layout_toRightOf="@+id/theater_score_in_detail_page"
-                android:layout_toEndOf="@+id/theater_score_in_detail_page" />
+
+            <ImageView
+                android:id="@+id/location_forward_in_detail_page"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:scaleType="fitXY"
+                android:background="@mipmap/forward_icon"
+                android:layout_marginRight="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
         </RelativeLayout>
-    </RelativeLayout>
 
-    <RelativeLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/address_in_detail_page"
-        android:background="#FFFFFF"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="10dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
-
-        <ImageView
-            android:id="@+id/loc_icon_in_detail_page"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:scaleType="fitXY"
-            android:background="@mipmap/location_icon"
-            android:layout_marginLeft="7dp"
-            android:layout_centerVertical="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
-
-        <TextView
-            android:text="位置"
-            android:id="@+id/theater_address_in_detail_page"
-            android:layout_width="wrap_content"
+        <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/phone_call_in_detail_page"
+            android:background="@drawable/button_selector"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="#666666"
-            android:textSize="14dp"
-            android:layout_marginTop="7dp"
-            android:layout_marginLeft="7dp"
-            android:layout_toRightOf="@+id/loc_icon_in_detail_page"
-            android:layout_toEndOf="@+id/loc_icon_in_detail_page" />
-
-        <TextView
-            android:text="666m"
-            android:id="@+id/distance_in_detail_page"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="#666666"
-            android:textSize="14dp"
-            android:layout_marginTop="3dp"
-            android:layout_below="@+id/theater_address_in_detail_page"
-            android:layout_alignLeft="@+id/theater_address_in_detail_page"
-            android:layout_alignStart="@+id/theater_address_in_detail_page" />
-
-        <ImageView
-            android:id="@+id/location_forward_in_detail_page"
-            android:layout_width="20dp"
-            android:layout_height="28dp"
-            android:scaleType="fitXY"
-            android:background="@mipmap/forward_icon"
-            android:layout_marginRight="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_centerVertical="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true" />
-    </RelativeLayout>
-
-    <RelativeLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/phone_call_in_detail_page"
-        android:background="#FFFFFF"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
-
-        <ImageView
-            android:id="@+id/phone_call_icon_in_detail_page"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:scaleType="fitXY"
-            android:background="@mipmap/phone_call"
-            android:layout_marginLeft="7dp"
-            android:layout_centerVertical="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
-
-        <TextView
-            android:text="12345678"
-            android:id="@+id/phone_number_in_detail_page"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="#666666"
-            android:textSize="14dp"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="7dp"
-            android:layout_toRightOf="@+id/phone_call_icon_in_detail_page"
-            android:layout_toEndOf="@+id/phone_call_icon_in_detail_page" />
-
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="28dp"
-            android:scaleType="fitXY"
-            android:background="@mipmap/forward_icon"
-            android:layout_marginRight="10dp"
-            android:layout_marginEnd="10dp"
+            android:padding="10dp"
             android:layout_marginTop="10dp"
-            android:layout_centerVertical="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true" />
-    </RelativeLayout>
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
 
-</LinearLayout>
+            <ImageView
+                android:id="@+id/phone_call_icon_in_detail_page"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:scaleType="fitXY"
+                android:background="@mipmap/phone_call"
+                android:layout_marginLeft="7dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:text="18819481159"
+                android:id="@+id/phone_number_in_detail_page"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#666666"
+                android:textSize="14dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="7dp"
+                android:layout_toRightOf="@+id/phone_call_icon_in_detail_page"
+                android:layout_toEndOf="@+id/phone_call_icon_in_detail_page" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:scaleType="fitXY"
+                android:background="@mipmap/forward_icon"
+                android:layout_marginRight="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/character"
+            android:background="#FFFFFF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:text="特色设施"
+                android:id="@+id/tips_text0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#666666"
+                android:textSize="14dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"/>
+
+            <LinearLayout
+                android:id="@+id/line1"
+                android:layout_below="@+id/tips_text0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical" >
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@android:color/darker_gray"
+                    android:layout_marginBottom="1.0px"/>
+            </LinearLayout>
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/character1"
+                android:background="#FFFFFF"
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line1">
+                <ImageView
+                    android:id="@+id/character1_icon"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:scaleType="fitXY"
+                    android:background="@mipmap/iv_theater_0"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+                <TextView
+                    android:text="儿童优惠：1.2米以下免费观影（儿童动画片需购票入场），1.2米以上儿童半价"
+                    android:id="@+id/character1_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#666666"
+                    android:textSize="14dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/character1_icon"
+                    android:layout_toEndOf="@+id/character1_icon"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="10dp"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/line2"
+                android:layout_below="@+id/character1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="1dp"
+                android:orientation="vertical" >
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@android:color/darker_gray"
+                    android:layout_marginBottom="1.0px"/>
+            </LinearLayout>
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/character2"
+                android:background="#FFFFFF"
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line2">
+                <ImageView
+                    android:id="@+id/character2_icon"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:scaleType="fitXY"
+                    android:background="@mipmap/iv_theater_1"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+                <TextView
+                    android:text="可停车：一楼有停车位"
+                    android:id="@+id/character2_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#666666"
+                    android:textSize="14dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/character2_icon"
+                    android:layout_toEndOf="@+id/character2_icon"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="10dp"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/line3"
+                android:layout_below="@+id/character2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="1dp"
+                android:orientation="vertical" >
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@android:color/darker_gray"
+                    android:layout_marginBottom="1.0px"/>
+            </LinearLayout>
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/character3"
+                android:background="#FFFFFF"
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line3">
+                <ImageView
+                    android:id="@+id/character3_icon"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:scaleType="fitXY"
+                    android:background="@mipmap/iv_theater_2"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+                <TextView
+                    android:text="休息区位置：位于影院大厅"
+                    android:id="@+id/character3_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#666666"
+                    android:textSize="14dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/character3_icon"
+                    android:layout_toEndOf="@+id/character3_icon"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="10dp"/>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/tips_text1"
+            android:background="#FFFFFF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/character"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:text="影院评论"
+                android:id="@+id/tips_text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#666666"
+                android:textSize="14dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"/>
+
+            <RelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/comment_button"
+                android:background="@drawable/button_selector_2"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="20dp"
+                android:layout_marginEnd="20dp" >
+                <TextView
+                    android:text="写评论"
+                    android:id="@+id/tips_text3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14dp"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+        <com.example.chenzhe.eyerhyme.view.MyListView
+            android:id="@+id/theater_comment_list"
+            android:layout_below="@+id/tips_text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp" >
+        </com.example.chenzhe.eyerhyme.view.MyListView>
+
+    </LinearLayout>
+</ScrollView>

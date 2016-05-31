@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#DDDDDD"
+    tools:context=".activity.CommentActivity">
+
+    <include layout="@layout/toolbar_support"/>
+
+    <RelativeLayout
+        android:layout_below="@+id/theater_comment_page"
+        android:background="#FFFFFF"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativeLayout">
+        <TextView android:text="影院名称"
+            android:id="@+id/theater_name_in_theater_comment_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#666666"
+            android:textSize="16dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"/>
+        <TextView
+            android:id="@+id/theater_score_in_theater_comment_page"
+            android:text="10.0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#EE7600"
+            android:textSize="16dp"
+            android:textStyle="italic"
+            android:layout_marginLeft="10dp"
+            android:layout_alignBottom="@+id/theater_name_in_theater_comment_page"
+            android:layout_toRightOf="@+id/theater_name_in_theater_comment_page"
+            android:layout_toEndOf="@+id/theater_name_in_theater_comment_page" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:background="#FFFFFF"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeLayout"
+        android:layout_marginTop="1dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginRight="1dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/relativeLayout2">
+        <TextView android:text="评分"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:textColor="#666666"
+            android:id="@+id/textView4"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="9dp"
+            android:layout_marginBottom="10dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <ImageView
+            android:id="@+id/comment_star_1"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:scaleType="fitXY"
+            android:background="@mipmap/comment_star_gray"
+            android:layout_marginLeft="19dp"
+            android:layout_marginStart="19dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/textView4"
+            android:layout_toEndOf="@+id/textView4" />
+        <ImageView
+            android:id="@+id/comment_star_2"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:scaleType="fitXY"
+            android:background="@mipmap/comment_star_gray"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="2dp"
+            android:layout_toRightOf="@+id/comment_star_1"
+            android:layout_toEndOf="@+id/comment_star_1" />
+        <ImageView
+            android:id="@+id/comment_star_3"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:scaleType="fitXY"
+            android:background="@mipmap/comment_star_gray"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="2dp"
+            android:layout_toRightOf="@+id/comment_star_2"
+            android:layout_toEndOf="@+id/comment_star_2" />
+        <ImageView
+            android:id="@+id/comment_star_4"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:scaleType="fitXY"
+            android:background="@mipmap/comment_star_gray"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="2dp"
+            android:layout_toRightOf="@+id/comment_star_3"
+            android:layout_toEndOf="@+id/comment_star_3" />
+        <ImageView
+            android:id="@+id/comment_star_5"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:scaleType="fitXY"
+            android:background="@mipmap/comment_star_gray"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="2dp"
+            android:layout_toRightOf="@+id/comment_star_4"
+            android:layout_toEndOf="@+id/comment_star_4" />
+        <TextView android:text="请您打分！"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:textStyle="italic"
+            android:textColor="#777777"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/comment_star_5"
+            android:layout_toEndOf="@+id/comment_star_5"
+            android:layout_marginLeft="30dp"
+            android:layout_marginStart="30dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:background="#FFFFFF"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginTop="1dp"
+        android:layout_below="@+id/relativeLayout2">
+        <EditText
+            android:id="@+id/content_theater_comment_page"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:editable="true"
+            android:background="#FFFFFF"
+            android:hint="亲，影院视听效果怎么样，环境和服务满意吗？"
+            android:maxLength="100"
+            android:maxLines="5"
+            android:minLines="5"
+            android:textSize="14dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
+
+        <TextView
+            android:id="@+id/text_size_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="加油！至少还差15个字哦~"
+            android:textSize="12dp"
+            android:textColor="#888888"
+            android:layout_marginBottom="5dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignRight="@+id/content_theater_comment_page"
+            android:layout_alignEnd="@+id/content_theater_comment_page" />
+    </RelativeLayout>
+
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:background="@drawable/button_selector_2" android:text="发表评论" android:textColor="#FFFFFF"
+        android:paddingLeft="20dp" android:paddingRight="20dp"
+        android:id="@+id/submit_theater_comment"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"/>
+
+</LinearLayout>

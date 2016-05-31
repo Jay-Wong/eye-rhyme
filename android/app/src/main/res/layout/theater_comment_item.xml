@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:background="#FFFFFF">
+    <RelativeLayout
+        android:layout_width="0dp" android:layout_height="wrap_content"
+        android:layout_weight="1" android:background="#FFFFFF" >
+        <ImageView
+            android:id="@+id/comment_user_head"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:scaleType="fitXY"
+            android:background="@mipmap/head" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp" android:layout_height="wrap_content"
+        android:layout_weight="5" android:background="#FFFFFF" >
+        <TextView
+            android:id="@+id/theater_comment_user_name"
+            android:text="昵称"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#4682B4"
+            android:textSize="14dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"/>
+        <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/theater_comment_grade"
+            android:background="#FFFFFF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginEnd="20dp">
+            <ImageView
+                android:id="@+id/comment_star_1"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:scaleType="fitXY"
+                android:background="@mipmap/unstar"
+                android:layout_marginTop="7dp" />
+            <ImageView
+                android:id="@+id/comment_star_2"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:scaleType="fitXY"
+                android:background="@mipmap/unstar"
+                android:layout_alignTop="@+id/comment_star_1"
+                android:layout_toRightOf="@+id/comment_star_1"
+                android:layout_toEndOf="@+id/comment_star_1" />
+            <ImageView
+                android:id="@+id/comment_star_3"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:scaleType="fitXY"
+                android:background="@mipmap/unstar"
+                android:layout_alignTop="@+id/comment_star_2"
+                android:layout_toRightOf="@+id/comment_star_2"
+                android:layout_toEndOf="@+id/comment_star_2" />
+            <ImageView
+                android:id="@+id/comment_star_4"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:scaleType="fitXY"
+                android:background="@mipmap/unstar"
+                android:layout_alignTop="@+id/comment_star_3"
+                android:layout_toRightOf="@+id/comment_star_3"
+                android:layout_toEndOf="@+id/comment_star_3" />
+            <ImageView
+                android:id="@+id/comment_star_5"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:scaleType="fitXY"
+                android:background="@mipmap/unstar"
+                android:layout_alignTop="@+id/comment_star_4"
+                android:layout_toRightOf="@+id/comment_star_4"
+                android:layout_toEndOf="@+id/comment_star_4" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/theater_comment_content"
+            android:text="女生上厕所要排很长的队orz..观影感受一般，就是上厕所的问题让我不爽！"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#444444"
+            android:textSize="16dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/theater_comment_grade"
+            android:layout_alignLeft="@+id/theater_comment_user_name"
+            android:layout_alignStart="@+id/theater_comment_user_name"
+            android:layout_alignRight="@+id/theater_comment_grade"
+            android:layout_alignEnd="@+id/theater_comment_grade" />
+
+        <TextView
+            android:id="@+id/theater_comment_time"
+            android:text="发表于: "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#666666"
+            android:textSize="14dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="5dp"
+            android:layout_below="@+id/theater_comment_content"
+            android:layout_alignLeft="@+id/theater_comment_content"
+            android:layout_alignStart="@+id/theater_comment_content" />
+    </RelativeLayout>
+</LinearLayout>
